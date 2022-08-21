@@ -1,57 +1,64 @@
 import { NextPage } from "next";
-
+import Head from "next/head";
 import Image from "next/image";
 
 import clocordImage from "../public/Clocord.png";
 
 const Home: NextPage = () => {
   return (
-    <div className="text-white">
-      <div className="bg-indigo-500 opacity-25 m-8 mb-5 min-h-[85vh]">
-        <div className="content flex bg-red-900 space-x-4 p-2">
-          <Image src={clocordImage} alt="Clocord Logo" />
+    <>
+      <Head>
+        <title>Clocord</title>
+        <link rel="icon" type="image/png" href="/Logo.png" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <div className="text-white">
+        <div className="bg-indigo-500 opacity-25 m-8 mb-5 min-h-[85vh]">
+          <div className="content flex bg-red-900 space-x-4 p-2">
+            <Image src={clocordImage} alt="Clocord Logo" />
 
-          <h1 className="text-3xl">Clocord</h1>
-        </div>
-
-        <div className="m-2">
-          <h1 className="text-5xl m-3">Date Time</h1>
-
-          <div className="flex space-x-3 m-3">
-            <StyledInput />
-            <StyledInput />
-            <StyledInput />
+            <h1 className="text-3xl">Clocord</h1>
           </div>
 
-          <div className="flex space-x-3 m-3">
-            <StyledInput />
-            <StyledInput />
-            <StyledInput />
+          <div className="m-2">
+            <h1 className="text-5xl m-3">Date Time</h1>
+
+            <div className="flex space-x-3 m-3">
+              <StyledInput />
+              <StyledInput />
+              <StyledInput />
+            </div>
+
+            <div className="flex space-x-3 m-3">
+              <StyledInput />
+              <StyledInput />
+              <StyledInput />
+            </div>
+          </div>
+
+          <div className="m-2">
+            <h1 className="text-5xl m-3"> Presets</h1>
+          </div>
+
+          <div className="m-3 space-y-2">
+            <div className="flex space-x-3">
+              <Preset />
+              <Preset />
+              <Preset />
+            </div>
+
+            <div className="flex space-x-3">
+              <Preset />
+              <Preset />
+            </div>
           </div>
         </div>
 
-        <div className="m-2">
-          <h1 className="text-5xl m-3"> Presets</h1>
-        </div>
-
-        <div className="m-3 space-y-2">
-          <div className="flex space-x-3">
-            <Preset />
-            <Preset />
-            <Preset />
-          </div>
-
-          <div className="flex space-x-3">
-            <Preset />
-            <Preset />
-          </div>
-        </div>
+        <footer className="text-right mr-2 text-white">
+          Clocord designed by Muatex and Coded by UltiRequiem
+        </footer>
       </div>
-
-      <footer className="text-right mr-2 text-white">
-        Clocord designed by Muatex and Coded by UltiRequiem
-      </footer>
-    </div>
+    </>
   );
 };
 
