@@ -5,5 +5,7 @@
 body {
   background: url("/background.png");
 
+  font-family: "Silkscreen";
+
   background-size: fill;
 }

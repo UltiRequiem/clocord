@@ -9,16 +9,16 @@ const Home: NextPage = () => {
   return (
     <>
       <CustomHead />
-      <div className="text-white">
-        <div className="bg-gray-light opacity-25 m-8 mb-5 min-h-[85vh] relative">
-          <div className="content flex bg-gray-dark space-x-4 p-2">
+      <div className="text-white rounded-2xl">
+        <div className="bg-gray-light m-8 mb-5 min-h-[85vh] relative rounded-2xl backdrop-blur-3xl">
+          <div className="content flex bg-gray-dark space-x-4 p-2 backdrop-blur-3xl rounded-tl-2xl">
             <Image src={clocordImage} alt="Clocord Logo" />
 
             <h1 className="text-3xl">Clocord</h1>
           </div>
 
           <div className="m-2">
-            <h1 className="text-5xl m-3">Date Time</h1>
+            <h1 className="text-5xl m-3">Date & Time</h1>
 
             <div className="flex space-x-3 m-3">
               <StyledInput />
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="m-2">
+          <div className="m-2 backdrop-blur-3xl">
             <h1 className="text-5xl m-3">Presets</h1>
 
             <div className="m-3 space-y-2">
@@ -50,8 +50,8 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="absolute right-0 top-0 bg-gray-light min-h-full min-w-[50%]">
-            <div className="bg-gray-dark">
+          <div className="absolute right-0 top-0 bg-gray-light min-h-full min-w-[50%] rounded-2xl backdrop-blur-3xl">
+            <div className="bg-gray-dark rounded-tr-2xl">
               <h1 className="text-2xl">Preview</h1>
               <div className="content flex space-x-4 p-2">
                 <Image src={userProfile} alt="User Profile Picture" />
@@ -114,6 +114,10 @@ const CustomHead = () => {
       <title>Clocord</title>
       <link rel="icon" type="image/png" href="/Logo.png" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Silkscreen&display=optional"
+      />
     </Head>
   );
 };
