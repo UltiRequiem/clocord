@@ -8,14 +8,10 @@ import userProfile from "../public/UserPfp.png";
 const Home: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Clocord</title>
-        <link rel="icon" type="image/png" href="/Logo.png" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+      <CustomHead />
       <div className="text-white">
-        <div className="bg-indigo-500 opacity-25 m-8 mb-5 min-h-[85vh] relative">
-          <div className="content flex bg-red-900 space-x-4 p-2">
+        <div className="bg-gray-light opacity-25 m-8 mb-5 min-h-[85vh] relative">
+          <div className="content flex bg-gray-dark space-x-4 p-2">
             <Image src={clocordImage} alt="Clocord Logo" />
 
             <h1 className="text-3xl">Clocord</h1>
@@ -54,8 +50,8 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="absolute right-0 top-0 bg-orange-600 min-h-full min-w-[50%]">
-            <div className="bg-sky-300">
+          <div className="absolute right-0 top-0 bg-gray-light min-h-full min-w-[50%]">
+            <div className="bg-gray-dark">
               <h1 className="text-2xl">Preview</h1>
               <div className="content flex space-x-4 p-2">
                 <Image src={userProfile} alt="User Profile Picture" />
@@ -109,5 +105,15 @@ const StyledInput = () => {
       <option value="FR">France</option>
       <option value="DE">Germany</option>
     </select>
+  );
+};
+
+const CustomHead = () => {
+  return (
+    <Head>
+      <title>Clocord</title>
+      <link rel="icon" type="image/png" href="/Logo.png" />
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
   );
 };
